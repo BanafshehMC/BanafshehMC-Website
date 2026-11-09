@@ -3,6 +3,7 @@
 // Colors
 $color-primary: #7528cc;
 $color-primary-dark: #5b21b6;
+$color-primary-light: #c084fc;
 $color-text: #cbcbcb;
 $color-heading: #555;
 $color-muted: #888;
@@ -14,7 +15,7 @@ $color-success: #4ade80;
 $color-warning: #fbbf24;
 
 // Typography
-$font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-base: 'BYekan', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 $font-size-root: 62.5%; // 1rem = 10px
 $font-size-base: 1.6rem;
 $font-size-small: 1.4rem;

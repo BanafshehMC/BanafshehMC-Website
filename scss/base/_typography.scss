@@ -1,10 +1,14 @@
 @use '../abstracts' as *;
+@use 'fonts';
 
 body {
   background-color: var(--color-background, #{$color-background});
   color: var(--color-text, #{$color-text});
-  font-family: $font-family-base;
   font-size: $font-size-base;
+}
+
+body, button {
+  font-family: $font-family-base;
 }
 
 h1 {

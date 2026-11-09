@@ -8,6 +8,19 @@ document.querySelectorAll('[data-action="not-ready"]').forEach((button) => {
   button.addEventListener('click', notReady);
 });
 
+const howToBuy = (event) => {
+  const product = event.currentTarget.dataset.product;
+  const message = product
+    ? `برای خرید ${product} به فروشگاه سرور در دیسکورد مراجعه کنید.`
+    : 'برای خرید به فروشگاه سرور در دیسکورد مراجعه کنید.';
+
+  confirm(message);
+};
+
+document.querySelectorAll('[data-action="how-to-buy"]').forEach((button) => {
+  button.addEventListener('click', howToBuy);
+});
+
 const header = document.querySelector('.header');
 const navToggle = document.querySelector('[data-nav-toggle]');
 const nav = document.getElementById('primary-navigation');

@@ -135,16 +135,173 @@
       <p class="games__game-description">
         در دنیای گل‌های فلاور امپتی نقشه‌های تازه را کشف کنید، با دوستانتان رقابت کنید و بهترین رکورد را ثبت کنید.
       </p>
-      <a class="button games__game-guide" href="#" aria-label="مشاهده راهنمای بازی FlowerEmpty">راهنمای بازی</a>
+      <button class="button--disabled" disabled>
+        به زودی
+      </button>
     </div>
   </article>
 </section>
 
 <!-- Shop -->
-<section id="store" class="shop">
-  <h2>
-    فروشگاه
-  </h2>
+<section id="store" class="shop" aria-labelledby="shop-heading">
+  <div class="shop__intro">
+    <h2 id="shop-heading" class="shop__heading">فروشگاه</h2>
+    <p class="shop__description">
+      رنک‌ها و سکه‌های سرور را از این بخش تهیه کنید. برای خرید هر محصول روی دکمه «نحوه خرید» بزنید.
+    </p>
+  </div>
+
+  <!-- Ranks -->
+  <div class="shop__group">
+    <h3 class="shop__separator"><span>رنک‌ها</span></h3>
+
+    <div class="shop__grid shop__grid--ranks">
+      <article class="shop__card">
+        <img class="shop__card-icon" src="img/rank-banafsheh.svg" alt="" width="96" height="96" loading="lazy">
+        <h4 class="shop__card-title">رنک بنفشه</h4>
+        <p class="shop__card-description">
+          رنک اختصاصی بنفشه با نشان ویژه در چت و دسترسی به امکانات خاص سرور.
+        </p>
+        <dl class="shop__card-details">
+          <div class="shop__card-detail">
+            <dt class="shop__card-label">قیمت</dt>
+            <dd class="shop__card-value shop__card-value--price">100,000 تومان</dd>
+          </div>
+          <div class="shop__card-detail">
+            <dt class="shop__card-label">مدت</dt>
+            <dd class="shop__card-value">1 ماه</dd>
+          </div>
+        </dl>
+        <button class="button shop__card-cta" type="button" data-action="how-to-buy" data-product="رنک بنفشه" aria-label="نحوه خرید رنک بنفشه">
+          نحوه خرید
+        </button>
+      </article>
+
+      <article class="shop__card">
+        <img class="shop__card-icon" src="img/rank-niloofar.svg" alt="" width="96" height="96" loading="lazy">
+        <h4 class="shop__card-title">رنک نیلوفر</h4>
+        <p class="shop__card-description">
+          رنک اختصاصی نیلوفر برای تجربه‌ای متفاوت، همراه با نشان ویژه و امکانات بیشتر.
+        </p>
+        <dl class="shop__card-details">
+          <div class="shop__card-detail">
+            <dt class="shop__card-label">قیمت</dt>
+            <dd class="shop__card-value shop__card-value--price">40,000 تومان</dd>
+          </div>
+          <div class="shop__card-detail">
+            <dt class="shop__card-label">مدت</dt>
+            <dd class="shop__card-value">1 ماه</dd>
+          </div>
+        </dl>
+        <button class="button--outline shop__card-cta" type="button" data-action="how-to-buy" data-product="رنک نیلوفر" aria-label="نحوه خرید رنک نیلوفر">
+          نحوه خرید
+        </button>
+      </article>
+    </div>
+  </div>
+
+  <!-- Coins -->
+  <div class="shop__group">
+    <h3 class="shop__separator"><span>سکه‌ها</span></h3>
+
+    <div class="shop__grid shop__grid--coins">
+      <article class="shop__card">
+        <img class="shop__card-icon" src="img/coins.svg" alt="" width="96" height="96" loading="lazy">
+        <h4 class="shop__card-title">100 سکه</h4>
+        <p class="shop__card-description">
+          بسته 100 سکه برای خرید آیتم‌ها و امکانات ویژه در سرور.
+        </p>
+        <dl class="shop__card-details">
+          <div class="shop__card-detail">
+            <dt class="shop__card-label">قیمت</dt>
+            <dd class="shop__card-value shop__card-value--price">50,000 تومان</dd>
+          </div>
+          <div class="shop__card-detail">
+            <dt class="shop__card-label">مدت</dt>
+            <dd class="shop__card-value shop__card-value--dash">
+              <span aria-hidden="true">—</span>
+              <span class="visually-hidden">دائمی</span>
+            </dd>
+          </div>
+        </dl>
+        <button class="button--outline shop__card-cta" type="button" data-action="how-to-buy" data-product="بسته 100 سکه" aria-label="نحوه خرید بسته 100 سکه">
+          نحوه خرید
+        </button>
+      </article>
+
+      <article class="shop__card">
+        <img class="shop__card-icon" src="img/coins.svg" alt="" width="96" height="96" loading="lazy">
+        <h4 class="shop__card-title">250 سکه</h4>
+        <p class="shop__card-description">
+          بسته 250 سکه برای خرید آیتم‌ها و امکانات ویژه در سرور.
+        </p>
+        <dl class="shop__card-details">
+          <div class="shop__card-detail">
+            <dt class="shop__card-label">قیمت</dt>
+            <dd class="shop__card-value shop__card-value--price">100,000 تومان</dd>
+          </div>
+          <div class="shop__card-detail">
+            <dt class="shop__card-label">مدت</dt>
+            <dd class="shop__card-value shop__card-value--dash">
+              <span aria-hidden="true">—</span>
+              <span class="visually-hidden">دائمی</span>
+            </dd>
+          </div>
+        </dl>
+        <button class="button shop__card-cta" type="button" data-action="how-to-buy" data-product="بسته 250 سکه" aria-label="نحوه خرید بسته 250 سکه">
+          نحوه خرید
+        </button>
+      </article>
+
+      <article class="shop__card">
+        <img class="shop__card-icon" src="img/coins.svg" alt="" width="96" height="96" loading="lazy">
+        <h4 class="shop__card-title">400 سکه</h4>
+        <p class="shop__card-description">
+          بسته 400 سکه برای خرید آیتم‌ها و امکانات ویژه در سرور.
+        </p>
+        <dl class="shop__card-details">
+          <div class="shop__card-detail">
+            <dt class="shop__card-label">قیمت</dt>
+            <dd class="shop__card-value shop__card-value--price">180,000 تومان</dd>
+          </div>
+          <div class="shop__card-detail">
+            <dt class="shop__card-label">مدت</dt>
+            <dd class="shop__card-value shop__card-value--dash">
+              <span aria-hidden="true">—</span>
+              <span class="visually-hidden">دائمی</span>
+            </dd>
+          </div>
+        </dl>
+        <button class="button--outline shop__card-cta" type="button" data-action="how-to-buy" data-product="بسته 400 سکه" aria-label="نحوه خرید بسته 400 سکه">
+          نحوه خرید
+        </button>
+      </article>
+
+      <article class="shop__card">
+        <img class="shop__card-icon" src="img/coins.svg" alt="" width="96" height="96" loading="lazy">
+        <h4 class="shop__card-title">500 سکه</h4>
+        <p class="shop__card-description">
+          بسته 500 سکه برای خرید آیتم‌ها و امکانات ویژه در سرور.
+        </p>
+        <dl class="shop__card-details">
+          <div class="shop__card-detail">
+            <dt class="shop__card-label">قیمت</dt>
+            <dd class="shop__card-value shop__card-value--price">240,000 تومان</dd>
+          </div>
+          <div class="shop__card-detail">
+            <dt class="shop__card-label">مدت</dt>
+            <dd class="shop__card-value shop__card-value--dash">
+              <span aria-hidden="true">—</span>
+              <span class="visually-hidden">دائمی</span>
+            </dd>
+          </div>
+        </dl>
+        <button class="button--outline shop__card-cta" type="button" data-action="how-to-buy" data-product="بسته 500 سکه" aria-label="نحوه خرید بسته 500 سکه">
+          نحوه خرید
+        </button>
+      </article>
+    </div>
+  </div>
 </section>
 
 <!-- Rules -->

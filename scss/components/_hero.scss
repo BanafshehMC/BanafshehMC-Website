@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+.hero {
+  display: flex;
+  width: 100%;
+  min-height: 50dvh;
+  background-color: $color-muted;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $space-md;
+  padding: $space-md;
+  margin-bottom: em(40);
+
+  &__header > span {
+    color: $color-primary;
+  }
+
+  &__description {
+    height: 20%;
+    block-ellipsis: auto;
+    text-wrap-style: balance;
+    text-align: center;
+  }
+
+  &__cta-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: $space-md;
+    justify-content: center;
+    align-items: center;
+  }
+}

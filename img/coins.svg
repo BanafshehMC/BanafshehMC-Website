@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-labelledby="coins-title">
+  <title id="coins-title">نشان سکه</title>
+
+  <defs>
+    <linearGradient id="coins-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2c1f08"/>
+      <stop offset="1" stop-color="#171309"/>
+    </linearGradient>
+
+    <linearGradient id="coins-edge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b45309"/>
+      <stop offset="1" stop-color="#78350f"/>
+    </linearGradient>
+
+    <linearGradient id="coins-face" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fde68a"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+
+    <radialGradient id="coins-glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#fbbf24" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="96" height="96" rx="24" fill="url(#coins-bg)"/>
+  <rect x=".5" y=".5" width="95" height="95" rx="23.5" fill="none" stroke="#fbbf24" stroke-opacity=".35"/>
+  <circle cx="48" cy="46" r="34" fill="url(#coins-glow)"/>
+
+  <g>
+    <path d="M22 58v6c0 5 11.6 9 26 9s26-4 26-9v-6Z" fill="url(#coins-edge)"/>
+    <ellipse cx="48" cy="58" rx="26" ry="9" fill="url(#coins-face)"/>
+
+    <path d="M24 49v6c0 4.7 10.7 8.5 24 8.5s24-3.8 24-8.5v-6Z" fill="url(#coins-edge)"/>
+    <ellipse cx="48" cy="49" rx="24" ry="8.5" fill="url(#coins-face)"/>
+
+    <path d="M27 40v6c0 4.2 9.4 7.5 21 7.5s21-3.3 21-7.5v-6Z" fill="url(#coins-edge)"/>
+    <ellipse cx="48" cy="40" rx="21" ry="7.5" fill="#fcd34d"/>
+    <ellipse cx="48" cy="40" rx="14.5" ry="5" fill="none" stroke="#d97706" stroke-width="1.6"/>
+    <path d="M48 35.5l1.6 3.3 3.4.5-2.5 2.4.6 3.4-3.1-1.6-3.1 1.6.6-3.4-2.5-2.4 3.4-.5Z" fill="#b45309"/>
+  </g>
+
+  <path d="M75 19l1.2 3.3 3.3 1.2-3.3 1.2L75 28l-1.2-3.3-3.3-1.2 3.3-1.2Z" fill="#fde68a" opacity=".85"/>
+  <path d="M21 31l.9 2.5 2.5.9-2.5.9-.9 2.5-.9-2.5-2.5-.9 2.5-.9Z" fill="#fcd34d" opacity=".5"/>
+</svg>
