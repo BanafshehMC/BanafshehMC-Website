@@ -2,6 +2,7 @@
 @use '../components/hero';
 @use '../components/games';
 @use '../components/shop';
+@use '../components/rules';
 
 #root {
   padding: $space-xs;

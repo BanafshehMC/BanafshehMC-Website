@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+
+.rules {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $space-md;
+
+  &__description {
+    text-wrap-style: balance;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: $space-md;
+    list-style: none;
+  }
+}
+
+@include media-up($breakpoint-md) {
+  .rules {
+    &__description {
+      width: 80%;
+    }
+    &__list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
