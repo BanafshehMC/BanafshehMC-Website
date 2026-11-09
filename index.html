@@ -2,7 +2,6 @@
 <html class="no-js" lang="fa-IR">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="scss/pages/_home.scss"/>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>بنفشه ام سی - BanafshehMC</title>
@@ -91,7 +90,7 @@
 
 <!-- Games Intro -->
 <section id="games-intro" class="games-intro">
-  <h2>بازی های ما</h2>
+  <h2 id="games-heading">بازی های ما</h2>
   <p class="games-intro__description">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto commodi deleniti eos eveniet
     expedita explicabo facere, facilis id itaque obcaecati omnis, quaerat quisquam sit ut veniam voluptas. In,
@@ -100,18 +99,52 @@
 </section>
 
 <!-- Games -->
-<section class="games">
-  <!-- Game -->
-  <div class="games__game-card">
-    <h4>title</h4>
-    <p>description</p>
-    <span>is Online</span>
-  </div>
+<section class="games" aria-labelledby="games-heading">
+  <!-- Paintball -->
+  <article class="games__game-card">
+    <img class="games__game-image" src="img/game-placeholder.svg" alt="" width="1200" height="800" loading="lazy"/>
+    <span class="games__game-overlay" aria-hidden="true"></span>
+    <div class="games__game-content">
+      <div class="games__game-header">
+        <h3 class="games__game-title">توپ رنگ</h3>
+        <span class="games__game-status games__game-status--online">
+          <span class="games__game-status-dot" aria-hidden="true"></span>
+          آنلاین
+        </span>
+      </div>
+      <p class="games__game-description">
+        در میدان‌های پینت‌بال تیمی با هم رقابت کنید، از پناهگاه‌ها استفاده کنید و با گلوله‌های رنگی حریف را از میدان
+        بیرون کنید.
+      </p>
+      <a class="button games__game-guide" href="#" aria-label="مشاهده راهنمای بازی Paintball">راهنمای بازی</a>
+    </div>
+  </article>
+
+  <!-- FlowerEmpty -->
+  <article class="games__game-card">
+    <img class="games__game-image" src="img/game-placeholder.svg" alt="" width="1200" height="800" loading="lazy"/>
+    <span class="games__game-overlay" aria-hidden="true"></span>
+    <div class="games__game-content">
+      <div class="games__game-header">
+        <h3 class="games__game-title">گل یا پوچ</h3>
+        <span class="games__game-status games__game-status--soon">
+          <span class="games__game-status-dot" aria-hidden="true"></span>
+          به‌زودی
+        </span>
+      </div>
+      <p class="games__game-description">
+        در دنیای گل‌های فلاور امپتی نقشه‌های تازه را کشف کنید، با دوستانتان رقابت کنید و بهترین رکورد را ثبت کنید.
+      </p>
+      <a class="button games__game-guide" href="#" aria-label="مشاهده راهنمای بازی FlowerEmpty">راهنمای بازی</a>
+    </div>
+  </article>
 </section>
 
 <!-- Shop -->
-<section>
-
+<section id="store" class="shop">
+  <h2>
+    فروشگاه
+  </h2>
 </section>
 
 <!-- Rules -->

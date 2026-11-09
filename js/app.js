@@ -1,4 +1,4 @@
-export const notReady = () => {
+const notReady = () => {
   confirm(`
   سرور بنفشه ام
   `)
