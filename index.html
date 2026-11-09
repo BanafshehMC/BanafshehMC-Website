@@ -2,6 +2,7 @@
 <html class="no-js" lang="fa-IR">
 
 <head>
+  <link rel="stylesheet" type="text/css" href="scss/pages/_home.scss"/>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>بنفشه ام سی - BanafshehMC</title>
@@ -22,12 +23,102 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
+<body id="root">
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/app.js"></script>
+<!-- Header -->
+<header class="header">
+  <div class="header__inner">
+    <a class="header__brand" href="#" aria-label="بنفشه ام سی، صفحه اصلی">
+      <span class="header__logo" aria-hidden="true">ب</span>
+      <span class="header__title"><strong>بنفشه</strong> ام سی</span>
+    </a>
 
+    <nav class="header__nav" id="primary-navigation" aria-label="ناوبری اصلی">
+      <ul class="header__list">
+        <li>
+          <a class="header__link header__link--active" href="#" aria-current="page">خانه</a>
+        </li>
+        <li>
+          <a class="header__link" href="#games-intro">بازی ها</a>
+        </li>
+        <li>
+          <a class="header__link" href="#store">فروشگاه</a>
+        </li>
+        <li>
+          <a class="header__link" href="#rules">قوانین</a>
+        </li>
+        <li>
+          <a class="header__link" href="#about">درباره ما</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="button header__cta" type="button" data-action="not-ready">
+        کپی آی‌پی سرور
+      </button>
+      <button class="header__toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
+              aria-label="باز کردن منو" data-nav-toggle>
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <h1 class="hero__header">
+      <span>
+        بنفشه
+      </span>
+    ام سی
+  </h1>
+  <p class="hero__description">
+    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه
+    روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود
+  </p>
+  <div class="hero__cta-buttons">
+    <button class="button" type="button" data-action="not-ready">
+      کپی نشانی
+    </button>
+    <button class="button--outline">
+      مشاهده آموزشات
+    </button>
+  </div>
+</section>
+
+<!-- Games Intro -->
+<section id="games-intro" class="games-intro">
+  <h2>بازی های ما</h2>
+  <p class="games-intro__description">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto commodi deleniti eos eveniet
+    expedita explicabo facere, facilis id itaque obcaecati omnis, quaerat quisquam sit ut veniam voluptas. In,
+    veritatis!
+  </p>
+</section>
+
+<!-- Games -->
+<section class="games">
+  <!-- Game -->
+  <div class="games__game-card">
+    <h4>title</h4>
+    <p>description</p>
+    <span>is Online</span>
+  </div>
+</section>
+
+<!-- Shop -->
+<section>
+
+</section>
+
+<!-- Rules -->
+
+<!-- About us -->
+
+<script src="js/app.js"></script>
 </body>
 
 </html>

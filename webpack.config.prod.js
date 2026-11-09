@@ -8,11 +8,11 @@ module.exports = merge(common, {
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
+      inject: false,
     }),
     new CopyPlugin({
       patterns: [
         { from: 'img', to: 'img' },
-        { from: 'css', to: 'css' },
         { from: 'js/vendor', to: 'js/vendor' },
         { from: 'icon.svg', to: 'icon.svg' },
         { from: 'favicon.ico', to: 'favicon.ico' },

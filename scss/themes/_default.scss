@@ -1,0 +1,8 @@
+@use '../abstracts' as *;
+
+// Expose theme colors as custom properties so they can be overridden at runtime.
+:root {
+  --color-primary: #{$color-primary};
+  --color-text: #{$color-text};
+  --color-background: #{$color-background};
+}

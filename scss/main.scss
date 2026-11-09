@@ -1,0 +1,13 @@
+// ==========================================================================
+// Main stylesheet
+// Organized using the 7-1 pattern:
+// abstracts / vendors / themes / base / layout / components / pages
+// ==========================================================================
+
+@use 'abstracts';
+@use 'vendors';
+@use 'themes';
+@use 'base';
+@use 'layout';
+@use 'components';
+@use 'pages';

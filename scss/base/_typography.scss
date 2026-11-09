@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+
+body {
+  background-color: var(--color-background, #{$color-background});
+  color: var(--color-text, #{$color-text});
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+small {
+  font-size: $font-size-small;
+}

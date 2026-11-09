@@ -1,0 +1,231 @@
+@use '../abstracts' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba($color-background, 0.82);
+  border-bottom: 1px solid rgba($color-text, 0.12);
+  -webkit-backdrop-filter: blur(1.2rem);
+  backdrop-filter: blur(1.2rem);
+  transition: background-color 200ms ease, box-shadow 200ms ease;
+
+  &--scrolled {
+    background-color: rgba($color-background, 0.95);
+    box-shadow: 0 0.8rem 2.4rem rgba(0, 0, 0, 0.35);
+  }
+
+  &__inner {
+    align-items: center;
+    display: flex;
+    gap: $space-md;
+    justify-content: space-between;
+    margin-inline: auto;
+    max-width: 120rem;
+    min-height: 6.4rem;
+    padding-inline: $space-md;
+    width: 100%;
+  }
+
+  &__brand {
+    align-items: center;
+    color: $color-text;
+    display: inline-flex;
+    flex-shrink: 0;
+    gap: $space-sm;
+    text-decoration: none;
+
+    &:focus-visible {
+      border-radius: $space-xs;
+      outline: 2px solid $color-primary;
+      outline-offset: 0.4rem;
+    }
+  }
+
+  &__logo {
+    align-items: center;
+    background: linear-gradient(135deg, $color-primary, $color-primary-dark);
+    border-radius: 1.2rem;
+    box-shadow: 0 0.4rem 1.4rem rgba($color-primary, 0.35);
+    color: $color-surface;
+    display: inline-flex;
+    font-size: 2.2rem;
+    font-weight: 700;
+    height: 4rem;
+    justify-content: center;
+    line-height: 1;
+    width: 4rem;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+
+    strong {
+      color: $color-primary;
+      font-weight: 700;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    top: 100%;
+    inset-inline: 0;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-$space-sm);
+    pointer-events: none;
+    background-color: rgba($color-background, 0.98);
+    border-bottom: 1px solid rgba($color-text, 0.12);
+    box-shadow: 0 1.6rem 2.4rem rgba(0, 0, 0, 0.35);
+    padding: $space-md;
+    transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
+  }
+
+  &--open .header__nav {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+    list-style: none;
+  }
+
+  &__link {
+    border-radius: $space-xs;
+    color: $color-text;
+    display: block;
+    font-size: $font-size-base;
+    padding: $space-sm $space-md;
+    text-decoration: none;
+    transition: background-color 150ms ease, color 150ms ease;
+
+    &:hover,
+    &:focus-visible {
+      background-color: rgba($color-primary, 0.16);
+      color: $color-surface;
+    }
+
+    &--active {
+      background-color: rgba($color-primary, 0.16);
+      color: $color-surface;
+    }
+  }
+
+  &__actions {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    gap: $space-sm;
+  }
+
+  &__cta {
+    white-space: nowrap;
+  }
+
+  &__toggle {
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid rgba($color-text, 0.24);
+    border-radius: $space-xs;
+    color: $color-text;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 4rem;
+    justify-content: center;
+    padding: 0;
+    transition: background-color 150ms ease, border-color 150ms ease;
+    width: 4.4rem;
+
+    &:hover,
+    &:focus-visible {
+      background-color: rgba($color-primary, 0.16);
+      border-color: rgba($color-primary, 0.6);
+    }
+  }
+
+  &__toggle-bar {
+    background-color: currentColor;
+    border-radius: 999px;
+    display: block;
+    height: 0.2rem;
+    transition: opacity 180ms ease, transform 180ms ease;
+    width: 2rem;
+  }
+
+  &--open .header__toggle-bar {
+    &:nth-child(1) {
+      transform: translateY(0.7rem) rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      transform: translateY(-0.7rem) rotate(-45deg);
+    }
+  }
+}
+
+.header .header__cta {
+  display: none;
+}
+
+@include media-up($breakpoint-md) {
+  .header .header__cta {
+    display: inline-block;
+  }
+}
+
+@include media-up($breakpoint-lg) {
+  .header {
+    &__inner {
+      padding-inline: $space-xl;
+    }
+
+    &__nav {
+      position: static;
+      flex: 1;
+      visibility: visible;
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+      background-color: transparent;
+      border-bottom: 0;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    &__list {
+      align-items: center;
+      flex-direction: row;
+      gap: $space-xs;
+      justify-content: center;
+    }
+
+    &__toggle {
+      display: none;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header,
+  .header__nav,
+  .header__link,
+  .header__toggle,
+  .header__toggle-bar {
+    transition: none;
+  }
+}

@@ -1,0 +1,41 @@
+@use '../abstracts' as *;
+
+.button {
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
+  border-radius: $space-xs;
+  color: $color-surface;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $font-size-base;
+  line-height: 1.2;
+  padding: $space-sm $space-md;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color ease-in-out 200ms;
+
+  &:hover{
+    background-color: $color-primary-dark;
+    border-color: $color-primary-dark;
+  }
+
+  &--outline {
+    background-color: transparent;
+    border-radius: $space-xs;
+    border: 1px solid $color-primary;
+    color: $color-surface;
+    cursor: pointer;
+    display: inline-block;
+    font-size: $font-size-base;
+    line-height: 1.2;
+    padding: $space-sm $space-md;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color ease-in-out 200ms;
+
+    &:hover{
+      background-color: $color-primary;
+      color: $color-surface;
+    }
+  }
+}

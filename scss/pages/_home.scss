@@ -1,0 +1,58 @@
+@use '../abstracts' as *;
+
+#root {
+  padding: $space-xs;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $space-xs;
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+  min-height: 50dvh;
+  background-color: $color-muted;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $space-md;
+  padding: $space-md;
+
+  &__header > span {
+    color: $color-primary;
+  }
+
+  &__description {
+    height: 20%;
+    block-ellipsis: auto;
+    text-wrap-style: balance;
+    text-align: center;
+  }
+
+  &__cta-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: $space-md;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+.games-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 20dvh;
+  padding: $space-md;
+  gap: $space-md;
+
+  &__description {
+    text-align: center;
+    text-wrap-style: balance;
+  }
+}
