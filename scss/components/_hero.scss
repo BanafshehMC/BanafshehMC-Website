@@ -3,7 +3,7 @@
 .hero {
   display: flex;
   width: 100%;
-  min-height: 50dvh;
+  min-height: 50vh;
   background-color: $color-muted;
   flex-direction: column;
   justify-content: center;
@@ -29,5 +29,13 @@
     gap: $space-md;
     justify-content: center;
     align-items: center;
+  }
+}
+
+// Use the stable small viewport unit where supported so the section height does
+// not change while the mobile browser toolbar collapses/expands during scroll.
+@supports (min-height: 100svh) {
+  .hero {
+    min-height: 50svh;
   }
 }
