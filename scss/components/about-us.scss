@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 50vh;
+  overflow-y: scroll;
+  border: 1px solid rgba($color-text, 0.12);
+  border-radius: 1.6rem;
+  padding: $space-lg;
+  margin-top: em(40);
+
+  &__header {
+    text-align: center;
+  }
+
+  &__description {
+    text-align: center;
+    text-wrap-style: balance;
+    line-height: 1.5;
+  }
+}
+
+@include media-up($breakpoint-md) {
+  .about {
+    width: 80%;
+  }
+}
+
+@supports (min-height: 100svh) {
+  .about {
+    max-height: 50svh;
+  }
+}

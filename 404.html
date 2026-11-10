@@ -1,63 +1,58 @@
 <!doctype html>
-<html lang="en">
+<html lang="fa-IR">
 
 <head>
   <meta charset="utf-8">
-  <title>Page Not Found</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    * {
-      line-height: 1.2;
-      margin: 0;
-    }
-
-    html {
-      color: #888;
-      display: table;
-      font-family: sans-serif;
-      font-size: 62.5%;
-      height: 100%;
-      text-align: center;
-      width: 100%;
-    }
-
-    body {
-      display: table-cell;
-      font-size: 1.6rem;
-      vertical-align: middle;
-      margin: 2em auto;
-    }
-
-    h1 {
-      color: #555;
-      font-size: 3.2rem;
-      font-weight: 400;
-    }
-
-    p {
-      margin: 0 auto;
-      width: 280px;
-    }
-
-    @media only screen and (max-width: 280px) {
-
-      body,
-      p {
-        width: 95%;
-      }
-
-      h1 {
-        font-size: 2.4rem;
-        margin: 0 0 0.3em;
-      }
-
-    }
-  </style>
+  <title>صفحه پیدا نشد</title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 
-<body>
-  <h1>Page Not Found</h1>
-  <p>Sorry, but the page you were trying to view does not exist.</p>
+<body id="root">
+<!-- Header -->
+<header class="header">
+  <div class="header__inner">
+    <a class="header__brand" href="/" aria-label="بنفشه ام سی، صفحه اصلی">
+      <span class="header__logo" aria-hidden="true">ب</span>
+      <span class="header__title"><strong>بنفشه</strong> ام سی</span>
+    </a>
+
+    <nav class="header__nav" id="primary-navigation" aria-label="ناوبری اصلی">
+      <ul class="header__list">
+        <li>
+          <a class="header__link header__link--active" href="#" aria-current="page">خانه</a>
+        </li>
+        <li>
+          <a class="header__link" href="#games-intro">بازی ها</a>
+        </li>
+        <li>
+          <a class="header__link" href="#store">فروشگاه</a>
+        </li>
+        <li>
+          <a class="header__link" href="#rules">قوانین</a>
+        </li>
+        <li>
+          <a class="header__link" href="#about">درباره ما</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="button header__cta" type="button" data-action="not-ready">
+        کپی آی‌پی سرور
+      </button>
+      <button class="header__toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
+              aria-label="باز کردن منو" data-nav-toggle>
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+        <span class="header__toggle-bar"></span>
+      </button>
+    </div>
+  </div>
+</header>
+<h1>صفحه پیدا نشد</h1>
+<p>متاسفانه صفحه ای که دنبالشی نبود.</p>
+<script src="js/app.js"></script>
 </body>
 
 </html>

@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 20dvh;
+  min-height: 20vh;
   padding: $space-md;
   gap: $space-md;
 
@@ -30,7 +30,7 @@
     flex-direction: column;
     justify-content: flex-end;
     width: 100%;
-    min-height: 50dvh;
+    min-height: 50vh;
     padding: $p-md;
     overflow: hidden;
     border: 1px solid rgba($color-text, 0.12);
@@ -154,5 +154,17 @@
 @media (prefers-reduced-motion: reduce) {
   .games__game-image {
     transition: none;
+  }
+}
+
+// Use the stable small viewport unit where supported so the section heights do
+// not change while the mobile browser toolbar collapses/expands during scroll.
+@supports (min-height: 100svh) {
+  .games-intro {
+    min-height: 20svh;
+  }
+
+  .games__game-card {
+    min-height: 50svh;
   }
 }

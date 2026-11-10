@@ -40,7 +40,7 @@ npm run deploy
 ```
 
 This builds the site and deploys the Worker defined in `wrangler.jsonc`. The site is available at
-`https://banafshehmc-website.<your-subdomain>.workers.dev` unless a custom domain or route is configured.
+`https://banafshehmc.<your-subdomain>.workers.dev` unless a custom domain or route is configured.
 
 Validate the build and deployment configuration without publishing:
 

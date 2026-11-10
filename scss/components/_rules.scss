@@ -1,23 +1,80 @@
 @use '../abstracts' as *;
 
-
 .rules {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 120rem;
+  margin-inline: auto;
+  margin-bottom: em(40);
+  scroll-margin-top: 8rem;
   gap: $space-md;
 
+  &__heading {
+    color: $color-surface;
+  }
+
   &__description {
-    text-wrap-style: balance;
+    max-width: 70rem;
+    color: $color-muted;
+    line-height: 1.8;
     text-align: center;
+    text-wrap-style: balance;
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     gap: $space-md;
+    margin-top: $space-md;
+    padding: 0;
     list-style: none;
+  }
+
+  &__list-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    gap: $space-md;
+    padding: $space-lg;
+    border: 1px solid rgba($color-text, 0.12);
+    border-radius: 1.6rem;
+  }
+
+  &__rule-index {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, $color-primary-light 0%, $color-primary 45%, $color-primary-dark 100%);
+    box-shadow: 0 0.8rem 2rem rgba($color-primary, 0.35), inset 0 0 0 1px rgba($color-surface, 0.2);
+    color: $color-surface;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &__rule-content {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+  }
+
+  &__rule-title {
+    color: $color-surface;
+    font-size: $font-size-h3;
+    line-height: 1.3;
+  }
+
+  &__rule-description {
+    color: rgba($color-surface, 0.72);
+    line-height: 1.9;
   }
 }
 
@@ -26,8 +83,63 @@
     &__description {
       width: 80%;
     }
+
     &__list {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: $space-lg;
+
+      // Vertical guide line running through the centre of the zig-zag.
+      &::before {
+        content: '';
+        position: absolute;
+        inset-block: 0;
+        left: 50%;
+        width: 1px;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          rgba($color-primary, 0.45) 12%,
+          rgba($color-primary, 0.45) 88%,
+          transparent
+        );
+        transform: translateX(-50%);
+      }
+    }
+
+    &__list-item {
+      width: calc(50% - #{$space-md});
+
+      // Horizontal connector from each card to the centre guide line.
+      &::after {
+        content: '';
+        position: absolute;
+        inset-block-start: 50%;
+        width: $space-xl;
+        height: 1px;
+      }
+
+      &:nth-child(odd) {
+        align-self: flex-start;
+
+        &::after {
+          inset-inline-end: -$space-xl;
+          background: linear-gradient(to left, rgba($color-primary, 0.55), transparent);
+        }
+      }
+
+      &:nth-child(even) {
+        align-self: flex-end;
+
+        &::after {
+          inset-inline-start: -$space-xl;
+          background: linear-gradient(to right, rgba($color-primary, 0.55), transparent);
+        }
+      }
+    }
+
+    &__rule-index {
+      width: 6.4rem;
+      height: 6.4rem;
+      font-size: 2.4rem;
     }
   }
 }
