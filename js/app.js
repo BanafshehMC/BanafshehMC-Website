@@ -1,7 +1,5 @@
 const notReady = () => {
-  confirm(`
-  سرور بنفشه ام
-  `)
+  confirm(`سرور بنفشه ام سی در حال توسعه می باشد..`)
 };
 
 document.querySelectorAll('[data-action="not-ready"]').forEach((button) => {
@@ -11,8 +9,8 @@ document.querySelectorAll('[data-action="not-ready"]').forEach((button) => {
 const howToBuy = (event) => {
   const product = event.currentTarget.dataset.product;
   const message = product
-    ? `برای خرید ${product} به فروشگاه سرور در دیسکورد مراجعه کنید.`
-    : 'برای خرید به فروشگاه سرور در دیسکورد مراجعه کنید.';
+    ? `برای خرید ${product} به فروشگاه سرور در تلگرام مراجعه کنید.`
+    : 'برای خرید به فروشگاه سرور در تلگرام مراجعه کنید.';
 
   confirm(message);
 };
@@ -69,3 +67,24 @@ if (header && navToggle) {
   updateHeaderShadow();
   window.addEventListener('scroll', updateHeaderShadow, { passive: true });
 }
+
+const navLinks = nav ? Array.from(nav.querySelectorAll('a[href^="#"]')) : [];
+
+const updateActiveLink = () => {
+  const currentHash = window.location.hash || '#';
+
+  navLinks.forEach((link) => {
+    const isActive = link.getAttribute('href') === currentHash;
+
+    link.classList.toggle('header__link--active', isActive);
+
+    if (isActive) {
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  });
+};
+
+updateActiveLink();
+window.addEventListener('hashchange', updateActiveLink);
